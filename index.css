@@ -40,7 +40,7 @@ The calculation is the following
 screen size divided by browser base font size
  */
 
- /* Refrence: https://zellwk.com/blog/media-query-units/ */
+/* Refrence: https://zellwk.com/blog/media-query-units/ */
 
 /* 1200px / 16px = 75em */
 @media (max-width: 75em) {
@@ -69,5 +69,88 @@ screen size divided by browser base font size
 /* Base styles */
 
 body {
-    
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.8rem; /* 18px */
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--main-white);
+}
+
+h1,
+h2 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  text-align: center;
+}
+
+h1 {
+  font-size: 6rem; /* 60px */
+}
+
+h2 {
+  font-size: 4.2rem; /* 42px */
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--main-white);
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+/* nav */
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--main-red);
+  box-shadow: 0 2px 0 rgb(0, 0, 0, 0.4);
+  z-index: 10;
+}
+
+.nav-list {
+  display: flex;
+  margin-right: 2rem; /* 20px */
+}
+
+@media (max-width: 28.75em) {
+  .nav {
+    justify-content: center;
+  }
+
+  .nav-list {
+    margin: 0 1rem;
+  }
+}
+
+.nav-list a {
+  display: block;
+  font-size: 2.2rem; /* 22px */
+  padding: 2rem; /* 20px */
+}
+
+.nav-list a:hover {
+  background: var(--main-blue);
+}
+
+/* Welcome Section */
+.welcome-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+  background-image: linear-gradient(62deg, #3a3d40 0%, #181719 60%);
 }
